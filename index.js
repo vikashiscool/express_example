@@ -24,6 +24,7 @@ app.get("/pick-a-number/:num", function (req, res){
   res.send("You picked: " + num);
 });
 
+//example of query params (e.g. /multiply?x=4&y=3)
 app.get("/multiply", function (req, res){
   var x = req.query.x;
   var y = req.query.y;
@@ -31,18 +32,19 @@ app.get("/multiply", function (req, res){
   res.send( total.toString());
 });
 
-
+//Uses path.join and res.sendFile to render views
 app.get("/contact", function (req, res){
   var contact_path = path.join(views, "contact.html");
   res.sendFile( contact_path );
 });
 
-
+//Uses path.join and res.sendFile to render views
 app.get("/home", function (req, res){
   var contact_path = path.join(views, "home.html");
   res.sendFile( contact_path );
 });
 
+//Uses req.params.id for rendering data from taco JSON object.
 app.post("/tacos", function (req, res){
   console.log("yuhhh posted to meee");
   var burger = req.body.taco;

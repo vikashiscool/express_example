@@ -2,4 +2,4 @@
 
 Basic Node app using Express for routing, using both Url (color, pick-a-number) and query (multiply) params. 
 
-Also uses path.join and res.sendFile for rendering of views, and req.params.id for rendering data from taco JSON object.
+Uses path.join and res.sendFile to render of views, and req.body.id for rendering data from taco JSON object.
